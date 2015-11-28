@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Realm1()
-        Realm2()
         
+        Realm1()
+        
+        //一對多的情況
+        Realm2()
     }
     
     override func didReceiveMemoryWarning() {
