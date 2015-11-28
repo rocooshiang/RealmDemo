@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2793C211C09938000C31E3A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2793C1F1C09938000C31E3A /* Task.swift */; settings = {ASSET_TAGS = (); }; };
+		F2793C221C09938000C31E3A /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2793C201C09938000C31E3A /* TaskList.swift */; settings = {ASSET_TAGS = (); }; };
 		F2A9D19A1C049A4A00CCDCF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9D1991C049A4A00CCDCF6 /* AppDelegate.swift */; };
 		F2A9D19C1C049A4A00CCDCF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9D19B1C049A4A00CCDCF6 /* ViewController.swift */; };
 		F2A9D19F1C049A4A00CCDCF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A9D19D1C049A4A00CCDCF6 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F2793C1F1C09938000C31E3A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F2793C201C09938000C31E3A /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		F2A9D1961C049A4A00CCDCF6 /* RealmDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A9D1991C049A4A00CCDCF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A9D19B1C049A4A00CCDCF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F2793C231C09939000C31E3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2793C1F1C09938000C31E3A /* Task.swift */,
+				F2793C201C09938000C31E3A /* TaskList.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F2A9D18D1C049A4A00CCDCF6 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 		F2A9D1981C049A4A00CCDCF6 /* RealmDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F2793C231C09939000C31E3A /* Model */,
 				F2A9D1CB1C049B3300CCDCF6 /* Frameworks */,
 				F2A9D1991C049A4A00CCDCF6 /* AppDelegate.swift */,
 				F2A9D1E81C04A1E400CCDCF6 /* Person.swift */,
@@ -309,6 +323,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2793C211C09938000C31E3A /* Task.swift in Sources */,
+				F2793C221C09938000C31E3A /* TaskList.swift in Sources */,
 				F2A9D1E91C04A1E400CCDCF6 /* Person.swift in Sources */,
 				F2A9D19C1C049A4A00CCDCF6 /* ViewController.swift in Sources */,
 				F2A9D19A1C049A4A00CCDCF6 /* AppDelegate.swift in Sources */,
@@ -550,6 +566,7 @@
 				F2A9D1C01C049A4A00CCDCF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2A9D1C11C049A4A00CCDCF6 /* Build configuration list for PBXNativeTarget "RealmDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +575,7 @@
 				F2A9D1C31C049A4A00CCDCF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2A9D1C41C049A4A00CCDCF6 /* Build configuration list for PBXNativeTarget "RealmDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +584,7 @@
 				F2A9D1C61C049A4A00CCDCF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
