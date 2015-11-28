@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         Realm1()
         
-        //一對多的情況
+        //一對多的情況  List<Task> -> Task
         Realm2()
     }
     
@@ -108,39 +108,49 @@ class ViewController: UIViewController {
         try! realm.write {
             realm.add([taskListA,taskListB])
         }
-
+        
         //查詢
+        print("查詢：")
         let lists = realm.objects(TaskList)
+        var listA : List<Task>? = nil
+        var listB : List<Task>? = nil
         for idx in 0..<lists.count{
+            
             let list = lists[idx]
-            print("查詢：")
             print(list.name)
+            if idx == 0{
+                listA = list.tasks
+            }else{
+                listB = list.tasks
+            }
             
         }
         
-        //排序查詢
-        let lists2 = realm.objects(Task).sorted("name")
-        for idx in 0..<lists2.count{
-            let list = lists2[idx]
-            print("排序查詢：")
+        
+        //過濾查詢 using NSPredicate
+        print("過濾查詢：")
+        let predicate = NSPredicate(format: "name = %@ AND notes = %@", "iPhone 6", "32GB,Silver")
+        let phone = listA!.filter(predicate)
+        for idx in 0..<phone.count{
+            let list = phone[idx]
             print(list.name)
         }
         
-        //過濾查詢 using NSPredicate
-        let predicate = NSPredicate(format: "name = %@ AND notes = %@", "iPhone 6", "32GB,Silver")
-        let phone = realm.objects(Task).filter(predicate)
-        for idx in 0..<phone.count{
-            let list = phone[idx]
-            print("過濾查詢：")
+        //排序查詢
+        print("排序查詢：")
+        let lists2 = listB!.sorted("name")
+        for idx in 0..<lists2.count{
+            let list = lists2[idx]
             print(list.name)
         }
+        
         
         //單一刪除
         try! realm.write({ () -> Void in
             realm.delete(lists2[1])
         })
         
-
+        
     }
     
 }
